@@ -1,7 +1,12 @@
 const TelegramBot = require('node-telegram-bot-api');
 const fetch = require('node-fetch');
 
-const token = '6010124037:AAG9MTD6RIIIqnzXgFU8jS0AUAQsrl1gudA';
+const token = process.env.TOKEN;
+/*
+It is not safe to store the token in the code.
+Removing or Deleting a File From the Git History
+git filter-branch --tree-filter 'rm -f <file>' HEAD
+*/
 
 const bot = new TelegramBot(token, { polling: true });
 
